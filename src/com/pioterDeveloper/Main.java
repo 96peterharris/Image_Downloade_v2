@@ -16,7 +16,6 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         String address = "";
-        String folder = "";
 
         System.out.println("Paste Web Page address: ");
         address = input.nextLine();

@@ -14,7 +14,7 @@ public class OpenFile{
 
         StringBuilder contentBuilder = new StringBuilder();
         try {
-            BufferedReader input = new BufferedReader(new FileReader(fileName)); //"cats.html"
+            BufferedReader input = new BufferedReader(new FileReader(fileName));
 
             while ((reader = input.readLine()) != null) {
                 contentBuilder.append(reader);

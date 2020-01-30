@@ -19,7 +19,7 @@ public class WebToFile {
     }
 
     public String getAddress(){
-        return this.webPageAddress;
+        return this.domainAddress;
     }
 
     public String getHtmlName() {
@@ -31,7 +31,9 @@ public class WebToFile {
     }
 
     private void domainMatcher(){
-        Matcher domain_matcher = Pattern.compile("http.*\\.[a-z]+\\/").matcher(this.webPageAddress);
+        Matcher domain_matcher = Pattern.compile("(http.*\\.[a-z]+\\/)").matcher(this.webPageAddress);
+
+
 
         if(domain_matcher.find()){
             this.domainAddress = domain_matcher.group(0);
@@ -44,10 +46,7 @@ public class WebToFile {
 
         if(htmlName_matcher.find()){
             String tmp1 = htmlName_matcher.group(0).replaceAll("\\.","_");;
-           // System.out.println(tmp1);
             String tmp2 = tmp1.replaceAll("\\/+","");
-            //System.out.println(tmp2);
-
             this.htmlName = tmp2 + ".html";
         }
     }
