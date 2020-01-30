@@ -56,7 +56,7 @@ public class Downloader {
 
                 if(responseCode == 200){
                     urlToImage(c.img_url, c.title, c.fileType);
-                    System.out.println("Response code: - OK " + "- File: " + "\"" + c.title + "\"");
+                    System.out.println("Response code: 200 - OK " + "- File: " + "\"" + c.title + "\"");
                 }
                 else
                 {

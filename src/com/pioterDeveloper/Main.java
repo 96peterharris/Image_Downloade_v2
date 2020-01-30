@@ -18,7 +18,7 @@ public class Main {
         String address = "";
         String folder = "";
 
-        System.out.println("Paste Web page address: ");
+        System.out.println("Paste Web Page address: ");
         address = input.nextLine();
 
         webToFile.setWebPageAddress(address);
